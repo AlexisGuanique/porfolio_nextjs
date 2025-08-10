@@ -35,7 +35,7 @@ export default function FolioCard({
   return (
     <div
       ref={ref}
-      className={`w-full rounded-[20px] std-backdrop-blur bg-linear-to-r from-[#d9d9d91f] to-[#7373731f] grid grid-cols-1 items-start lg:grid-cols-12 xl:flex gap-5 xl:gap-10 p-6 duration-700 ${
+      className={`w-full rounded-[20px] std-backdrop-blur bg-linear-to-r from-[#0000001f] to-[#ffffff1f] grid grid-cols-1 items-start lg:grid-cols-12 xl:flex gap-5 xl:gap-10 p-6 duration-700 transition-all hover:-translate-y-4 ${
         inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
       }`}
     >
@@ -44,7 +44,7 @@ export default function FolioCard({
         width={420}
         height={700}
         alt="work"
-        className="rounded-[10px] w-full lg:col-span-5"
+        className="rounded-[10px] w-full lg:col-span-5 max-w-[400px] max-h-[500px] object-cover"
       />
       <div className="flex flex-col gap-4 lg:col-span-7">
         <div className="flex items-center justify-between">
@@ -56,17 +56,23 @@ export default function FolioCard({
               href={liveLink}
               className="rounded-full bg-icon-radial p-3 hover:bg-red"
               target="_blank"
-              aria-label="View Github Repo"
+              aria-label="View Live Demo"
               data-blobity-radius="34"
               data-blobity-magnetic="true"
+              {...(!liveLink && {
+                "data-blobity-tooltip": `Privately owned by ${owner}`,
+              })}
             >
-              <Icon icon="line-md:external-link-rounded" />
+              <Icon 
+                icon="line-md:external-link-rounded" 
+                className={`${!liveLink && "opacity-30"}`}
+              />
             </Link>
             <Link
               href={`${gitLink ? gitLink : "#"}`}
               className="rounded-full bg-icon-radial p-3"
               target="_blank"
-              aria-label="View Live Demo"
+              aria-label="View Github Repo"
               data-blobity-radius="34"
               data-blobity-magnetic="true"
               {...(!gitLink && {
@@ -80,7 +86,7 @@ export default function FolioCard({
             </Link>
           </div>
         </div>
-        <p className="text-base text-white/70">{about}</p>
+        <p className="text-lg text-white/70">{about}</p>
         <div className="flex gap-3 md:gap-4 flex-wrap">
           {stack.map((tech, index) => (
             <Tag key={index}>{tech}</Tag>

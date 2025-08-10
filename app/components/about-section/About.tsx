@@ -5,7 +5,6 @@ import { useView } from "@/contexts/ViewContext";
 import { useInView } from "react-intersection-observer";
 import AnimatedBody from "../ui/AnimatedBody";
 import AnimatedTitle from "../ui/AnimatedTitle";
-import ContraButton from "./ContraButton";
 
 const syne = Syne({ subsets: ["latin"] });
 
@@ -26,37 +25,43 @@ export default function About() {
       <AnimatedTitle
         wordSpace={"mr-[14px]"}
         charSpace={"mr-[0.001em]"}
-        className={`uppercase ${syne.className} antialiased text-4xl md:text-5xl xl:text-6xl font-bold opacity-80`}
+        className={`uppercase ${syne.className} antialiased text-4xl md:text-5xl xl:text-6xl font-bold`}
       >
-        I amplify brand voices through the web
+        Creo soluciones inteligentes que potencian marcas y simplifican procesos
       </AnimatedTitle>
       <div className="grid grid-cols-1 lg:grid-cols-[8.5fr_3.5fr] gap-8 mt-6">
-        <div className="grid grid-cols-1 antialiased gap-6 text-white/80 text-xl md:text-2xl">
+        <div className="grid grid-cols-1 antialiased gap-6 text-white/90 text-xl md:text-2xl">
           <AnimatedBody className="leading-[34px] md:leading-[39px]">
-            My passion lies in creating strong business solutions that aid
-            business growth. Whether it&apos;s a website to boost brand
-            publicity or software solutions that streamline otherwise manual
-            processes, I love taking brands from point A to the their dreamy
-            point B and iteratively improve as time goes on.
+            Soy Alexis Guanique, desarrollador full stack apasionado por
+            resolver problemas y convertir ideas en soluciones reales. Me
+            especializo en desarrollo web, automatización e inteligencia
+            artificial para generar impacto en los negocios. He desarrollado
+            desde extensiones de Chrome y chatbots con IA hasta sistemas
+            escalables en microservicios y bots automatizados. Mi código siempre
+            busca ser limpio, mantenible y escalable.
           </AnimatedBody>
           <AnimatedBody className="leading-[34px] md:leading-[39px]">
-            From writing my first lines of code back in late 2019 to this point
-            I have continually refined my development skills overtime picking up
-            UI/UX design on the way & solving complex challenges increasing the
-            complexity as time goes by to ensure improvement.
+            Manejo tecnologías como Python, Django, Flask, Node.js, React,
+            Next.js y TypeScript, y trabajo con bases de datos como PostgreSQL,
+            MongoDB y SQLite. También tengo experiencia desplegando y
+            administrando entornos en AWS, Google Cloud y Heroku, integrando
+            APIs y documentando procesos de forma clara.
           </AnimatedBody>
           <AnimatedBody className="inline leading-[34px] md:leading-[39px]">
-            Each challenge is unique so I ensure that I learn and grow through
-            each one ensuring that I not only put in my best but also deliver
-            solutions that businesses are proud to call their own. Wanna learn
-            more? Here&apos;s <br className="hidden md:block" />
+            Desde 2019, cada proyecto ha sido una oportunidad para aprender,
+            experimentar y subir el nivel. Me motiva enfrentar retos nuevos,
+            entender el problema de fondo y entregar una solución que no solo
+            funcione bien, sino que también sea algo de lo que el cliente y yo
+            podamos sentirnos orgullosos. Si quieres conocer más sobre mi
+            trabajo, aquí puedes acceder a mi currículum. Here&apos;s{" "}
+            <br className="hidden md:block" />
             <Link
               className="underline"
               href={
-                "https://drive.google.com/file/d/1Rd-IB_5pxsGj4RDtHjEggPB392ND29xB/view?usp=sharing"
+                "https://docs.google.com/document/d/e/2PACX-1vScp0s5CtJjRZmem6V-0diwXDPwO8AiZKWl5qooH4ZfFS-c2bmUjmePc7YNCTqc2SJlF23qyxaLGfFy/pub"
               }
             >
-              my résumè
+              mi currículum
             </Link>
             .
           </AnimatedBody>
@@ -68,11 +73,25 @@ export default function About() {
               charSpace={"mr-[0.001em]"}
               className="font-bold antialiased text-xl md:text-2xl mb-2"
             >
+              Backend Tools
+            </AnimatedTitle>
+            <AnimatedBody className="text-white/60 text-base md:text-xl leading-8">
+              Python, Django, Flask, Node.js, Express, PostgreSQL, MongoDB,
+              SQLite, Docker, Git/GitHub, AWS, Google Cloud, Heroku.
+            </AnimatedBody>
+          </div>
+
+          <div>
+            <AnimatedTitle
+              wordSpace={"mr-[0.5ch]"}
+              charSpace={"mr-[0.001em]"}
+              className="font-bold antialiased text-xl md:text-2xl mb-2"
+            >
               Frontend Tools
             </AnimatedTitle>
             <AnimatedBody className="text-white/60 text-base md:text-xl leading-8">
-              JavaScript(ES6+), React, Next.js, TypeScript, Redux, Redux
-              Toolkit, React Query, HTML5, Git/GitHub, React Hook Form, Formik.
+              JavaScript(ES6+), React, Redux, Zustand, Next.js, ViteJs, TypeScript, HTML5,
+              Git/GitHub.
             </AnimatedBody>
           </div>
           <div>
@@ -85,25 +104,10 @@ export default function About() {
             </AnimatedTitle>
             <AnimatedBody className="text-white/60 text-base md:text-xl leading-8">
               CSS3/SCSS/SASS, Tailwind CSS, Styled Components, Chakra UI, Framer
-              Motion, Bootstrap, ReCharts.
-            </AnimatedBody>
-          </div>
-          <div>
-            <AnimatedTitle
-              wordSpace={"mr-[0.5ch]"}
-              charSpace={"mr-[0.001em]"}
-              className="font-bold antialiased text-xl md:text-2xl mb-2"
-            >
-              Design Tools
-            </AnimatedTitle>
-            <AnimatedBody className="text-white/60 text-base md:text-xl leading-8">
-              Figma, FigJam, UX Research, UI Design, Prototyping.
+              Motion, Material UI, ReCharts.
             </AnimatedBody>
           </div>
         </div>
-      </div>
-      <div className="mt-10 sm:mt-20 lg:mt-10 mx-auto w-fit">
-        <ContraButton />
       </div>
     </section>
   );

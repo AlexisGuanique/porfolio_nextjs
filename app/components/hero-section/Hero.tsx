@@ -9,7 +9,7 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
-// @ts-ignore
+import { PiHandWaving } from "react-icons/pi";
 import "intersection-observer";
 import { useInView } from "react-intersection-observer";
 import { useView } from "@/contexts/ViewContext";
@@ -57,7 +57,22 @@ export default function Hero() {
     if (inView) setSectionInView("home");
   }, [inView, setSectionInView]);
 
+  // Efecto de alejamiento de la imagen de fondo
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.scrollY;
+      const rate = scrolled * -0.5;
+      document.body.style.backgroundPosition = `center ${rate}px`;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const rotate = useTransform(scrollYProgress, [0, 1], ["0deg", "-15deg"]);
+  
+  // Efecto de alejamiento de la imagen de fondo
+  const backgroundScale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
 
   return (
     <section
@@ -80,12 +95,7 @@ export default function Hero() {
             style={{ transformOrigin: "bottom right" }}
             className="col-span-3"
           >
-            <Image
-              src="/hand-wave.svg"
-              width={30}
-              height={30}
-              alt="hand-waving"
-            />
+            <PiHandWaving size={35}/>
           </motion.div>
         </motion.div>
         <motion.h1
@@ -94,36 +104,37 @@ export default function Hero() {
           animate={animateIn1}
         >
           <p className="text-white/60 inline">I&apos;m </p>
-          <span className="bg-linear-to-br bg-clip-text text-transparent from-[#7CC0C4] via-[#548FBA] to-[#3C84C7]">
-            Adeola Badero
+          <span className="bg-linear-to-br bg-clip-text text-transparent from-[#7CC0C4] via-[#6fabdd] to-[#3c94c7]">
+            Alexis Guanique
           </span>
-          <p>a Software Engineer</p>
+          <p>Full Stack Developer</p>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0 }}
           animate={animateIn2}
-          className="text-white/40  text-xl smm:text-2xl lg:text-3xl xl:text-4xl mt-3 smm:mt-6 "
+          className="text-white/80  text-xl smm:text-2xl lg:text-3xl xl:text-4xl mt-3 smm:mt-6 "
         >
-          currently focused on building user experiences that drive growth.
+          Passionate about problem-solving and learning new technologies.
         </motion.p>
       </div>
 
       {/* IMAGE */}
-      <div data-blobity-tooltip="Soft man">
+      <div data-blobity-tooltip="Alexis Guanique">
         <motion.div
           ref={imgRef}
           style={{ rotate }}
-          className="h-image flex items-center w-[310px] h-[380px] xl:w-[390px] xl:h-[470px] justify-center relative"
+          className="h-image w-[310px] h-[380px] xl:w-[390px] xl:h-[470px] relative overflow-hidden"
           initial={{ opacity: 0 }}
           animate={animateIn1}
         >
           <Image
-            src="/transparent-ade-min.png"
+            src="/alexis_img.jpeg"
             priority
             fill
-            alt="Ade's picture"
-            className="bg-image-radial px-10 pt-20"
+            alt="Alexis Guanique's picture"
+            className="object-cover object-center"
+            sizes="(max-width: 748px) 310px, (max-width: 1280px) 390px, 470px"
           />
         </motion.div>
       </div>

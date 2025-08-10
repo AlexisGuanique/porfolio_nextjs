@@ -164,13 +164,9 @@ export default function Contact() {
               className="w-full"
             >
               <div className="flex items-center justify-between py-4 md:py-5 lg:py-6">
-                <Link
-                  href="https://cal.com/adeolabadero/30min"
-                  target="_blank"
-                  className={`font-bold uppercase ${syne.className} underline opacity-50`}
-                >
-                  book a call?
-                </Link>
+                <span className="font-bold uppercase text-2xl">
+                  CONTACT ME
+                </span>
                 <Icon
                   icon="gg:close"
                   data-blobity

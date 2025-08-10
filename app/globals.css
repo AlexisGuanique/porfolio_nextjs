@@ -53,8 +53,21 @@
   scroll-behavior: smooth;
 }
 
+/* Efecto de parallax para la imagen de fondo */
+.parallax-bg {
+  background-image: url('/space.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  transition: background-size 0.1s ease-out;
+}
+
 body {
-  background: #08233b;
+  background: #196BBD;
+  background-image: url('/space.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   color: white;
   overscroll-behavior: none;
 
@@ -151,3 +164,112 @@ body {
     background-position: -50%;
   }
 }
+
+/* EFECTO DE METEORITOS */
+.meteor {
+  position: fixed;
+  width: 2px;
+  height: 2px;
+  background: linear-gradient(45deg, #ffffff, #ff6b6b, #4ecdc4);
+  border-radius: 50%;
+  box-shadow: 0 0 6px #ffffff, 0 0 12px #ff6b6b;
+  z-index: 1000;
+  animation: meteor-fall linear infinite;
+}
+
+/* Meteoritos gigantes */
+.meteor.giant {
+  width: 6px;
+  height: 6px;
+  box-shadow: 0 0 15px #ffffff, 0 0 30px #ff6b6b, 0 0 45px #4ecdc4, 0 0 60px #ffd93d;
+}
+
+/* Meteoritos grandes */
+.meteor.large {
+  width: 4px;
+  height: 4px;
+  box-shadow: 0 0 10px #ffffff, 0 0 20px #ff6b6b, 0 0 30px #4ecdc4;
+}
+
+/* Meteoritos medianos */
+.meteor.medium {
+  width: 3px;
+  height: 3px;
+  box-shadow: 0 0 8px #ffffff, 0 0 16px #ff6b6b;
+}
+
+/* Meteoritos pequeños (por defecto) */
+.meteor.small {
+  width: 2px;
+  height: 2px;
+  box-shadow: 0 0 6px #ffffff, 0 0 12px #ff6b6b;
+}
+
+.meteor::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent, #ffffff, transparent);
+  transform: rotate(45deg);
+  animation: meteor-trail 0.5s linear infinite;
+}
+
+@keyframes meteor-fall {
+  0% {
+    transform: translateX(-100px) translateY(-100px) rotate(45deg);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(calc(100vw + 100px)) translateY(calc(100vh + 100px)) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes meteor-trail {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(45deg) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) scale(0);
+  }
+}
+
+/* Variaciones de meteoritos para más realismo */
+.meteor:nth-child(1) { animation-duration: 3s; animation-delay: 0s; }
+.meteor:nth-child(2) { animation-duration: 4s; animation-delay: 0.5s; }
+.meteor:nth-child(3) { animation-duration: 3.5s; animation-delay: 1s; }
+.meteor:nth-child(4) { animation-duration: 5s; animation-delay: 1.5s; }
+.meteor:nth-child(5) { animation-duration: 4.5s; animation-delay: 2s; }
+.meteor:nth-child(6) { animation-duration: 3.8s; animation-delay: 2.5s; }
+.meteor:nth-child(7) { animation-duration: 4.2s; animation-delay: 3s; }
+.meteor:nth-child(8) { animation-duration: 3.3s; animation-delay: 3.5s; }
+.meteor:nth-child(9) { animation-duration: 3.7s; animation-delay: 4s; }
+.meteor:nth-child(10) { animation-duration: 4.8s; animation-delay: 4.5s; }
+.meteor:nth-child(11) { animation-duration: 3.2s; animation-delay: 5s; }
+.meteor:nth-child(12) { animation-duration: 4.1s; animation-delay: 5.5s; }
+.meteor:nth-child(13) { animation-duration: 3.9s; animation-delay: 6s; }
+.meteor:nth-child(14) { animation-duration: 4.6s; animation-delay: 6.5s; }
+.meteor:nth-child(15) { animation-duration: 3.4s; animation-delay: 7s; }
+.meteor:nth-child(16) { animation-duration: 4.3s; animation-delay: 7.5s; }
+.meteor:nth-child(17) { animation-duration: 3.6s; animation-delay: 8s; }
+.meteor:nth-child(18) { animation-duration: 4.7s; animation-delay: 8.5s; }
+.meteor:nth-child(19) { animation-duration: 3.1s; animation-delay: 9s; }
+.meteor:nth-child(20) { animation-duration: 4.4s; animation-delay: 9.5s; }
+.meteor:nth-child(21) { animation-duration: 3.8s; animation-delay: 10s; }
+.meteor:nth-child(22) { animation-duration: 4.9s; animation-delay: 10.5s; }
+.meteor:nth-child(23) { animation-duration: 3.3s; animation-delay: 11s; }
+.meteor:nth-child(24) { animation-duration: 4.0s; animation-delay: 11.5s; }
+.meteor:nth-child(25) { animation-duration: 3.5s; animation-delay: 12s; }
+

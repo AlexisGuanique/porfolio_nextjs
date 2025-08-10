@@ -13,8 +13,9 @@ export default function Home() {
   return (
     <main className="overflow-x-hidden sm:overflow-x-visible">
       <Hero />
-      <Works />
       <About />
+      <br />
+      <Works />
       <Contact />
       <Footer />
     </main>

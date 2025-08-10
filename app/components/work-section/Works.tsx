@@ -13,58 +13,92 @@ export default function Works() {
 
   const works = [
     {
-      title: "NiJASIT",
-      liveLink: "https://nijasit.bellsuniversity.edu.ng/",
+      title: "ChatBot",
+      liveLink: "",
       about:
-        "I led the development efforts of the Nigerian Journal of Applied Science and Innovative Technology (NiJASIT) journal which was commissioned by the Dean of Bells University of Technology to increase visibility, encourage collaboration, support faculty and student development and ultimately make a positive impact on both the local community and the global engineering field.",
-      stack: ["next.js", "javascript", "shadcn ui", "tailwindcss"],
-      img: "/nijasit.svg",
-      owner: "Bells Uni",
+        "Desarrollé un chatbot con backend en Python y Django, incorporando el framework LangChain para dotarlo de inteligencia artificial y permitir la interacción con la base de datos. Antes de enviar las respuestas al frontend, las procesé mediante la API de OpenAI para mejorar su formato. La comunicación entre backend y frontend se realizó a través de WebSockets. El frontend, desarrollado con React y Next.js, incluye funcionalidades para generar gráficos de línea, barra, dona y pastel, así como la creación de tablas e informes interactivos.",
+      stack: [
+        "python",
+        "django",
+        "langchain",
+        "openai api",
+        "react",
+        "next.js",
+        "tailwindcss",
+        "Material UI",
+        "Chart.js",
+        "Socket.io",
+      ],
+      img: "/chatbot.png",
+      owner: "Coorva The Right Talent Driving Your Peace Of Mind",
     },
     {
-      title: "Offset Africa",
-      liveLink: "https://offsetcomms.africa/",
+      title: "LinkedIn Extension",
+      liveLink: "",
       about:
-        "Offset Communications Africa’s website really allows them to stand out in the PR sector. It shows their works and case studies — highlighting their expertise and educating users about the company philosophy.",
-      stack: ["next.js", "typescript", "framer motion", "tailwindcss"],
-      img: "/offset-folio.svg",
-      owner: "Offset",
+        "Desarrollé una extensión de Chrome para automatizar la gestión de perfiles de LinkedIn. La herramienta verifica si un perfil ya existe en la base de datos consultando un endpoint con la URL del perfil. Si no está registrado, permite agregarlo utilizando datos públicos obtenidos mediante el JSESSIONID de la cookie del usuario autenticado, consultando la API de LinkedIn. Estos datos se envían en formato JSON a un backend en Python y Django, donde se registra el applicant y se genera su CV automáticamente. Además, integra la API de OpenAI para determinar el nivel de seniority del candidato.",
+      stack: [
+        "chrome extension",
+        "javascript",
+        "python",
+        "django",
+        "linkedin api",
+        "openai api",
+        "HTML",
+        "CSS",
+      ],
+      img: "/linkedinextension.png",
+      owner: "Coorva The Right Talent Driving Your Peace Of Mind",
     },
     {
-      title: "Shortly",
-      gitLink: "https://github.com/adex-hub/url-shortening-api-landing",
-      liveLink: "https://lnk-shortener.netlify.app/",
+      title: "BuenClub",
+      gitLink: "",
+      liveLink: "",
       about:
-        "A link shortener for a fictional company that effectively shortens links and stores them. No matter how many links you shorten, you can revisit the site anytime to view and manage your previously shortened links.",
-      stack: ["next.js", "typescript", "framer motion", "tailwindcss"],
-      img: "/shortly.svg",
+        "Participé en la migración de una aplicación monolítica desarrollada con Python, Flask y MongoDB hacia una arquitectura de microservicios utilizando la misma pila tecnológica. Implementamos Docker para contenerizar todas las APIs y documentamos cada servicio con Swagger. También contribuí a la migración del frontend de arquitectura monolítica a microservicios con React y Single-SPA, utilizando Material UI y CSS para los estilos.",
+      stack: [
+        "python",
+        "flask",
+        "mongodb",
+        "docker",
+        "swagger",
+        "react",
+        "single-spa",
+        "material ui",
+        "css",
+      ],
+      img: "/internalreport.png",
+      owner: "Sport Club S.A",
     },
     {
-      title: "Where in the world",
-      gitLink: "https://github.com/adex-hub/where-in-the-world",
-      liveLink: "https://where-in-the-world-ade.netlify.app/",
+      title: "UltraBot",
+      gitLink: "https://github.com/AlexisGuanique/ultrabot",
+      liveLink: "",
       about:
-        "A fun tool for checking information about any country in the world such as the country’s native name, currency, population,  border countries etc. It features dynamic routing for each country and theme switch.",
-      stack: ["react", "react-router", "javascript", "tailwindcss"],
-      img: "/witw.svg",
+        "Desarrollé un sistema de automatización de procesos utilizando Python. Implementé bots que interactúan con aplicaciones de escritorio mediante PyAutoGUI y reconocimiento de imágenes, así como con aplicaciones web a través de Selenium y manipulación del DOM. Utilicé SQLite como base de datos y creé la interfaz gráfica con Tkinter. Los bots fueron desplegados en máquinas virtuales en AWS (EC2) y Google Cloud (VMs). Además, desarrollé un módulo de autenticación en una API independiente construida con Python y Flask, dockerizada y alojada en Google Cloud, utilizando la misma base de datos SQLite.",
+      stack: [
+        "python",
+        "pyautogui",
+        "selenium",
+        "sqlite",
+        "tkinter",
+        "flask",
+        "docker",
+        "aws ec2",
+        "google cloud",
+      ],
+      img: "/ultrabot.png",
+      owner: "Personal",
     },
-    // {
-    //   title: "Yourtodo",
-    //   gitLink: "https://github.com/adex-hub/Yourtodo",
-    //   liveLink: "https://yourtodo-v1.vercel.app/",
-    //   about:
-    //     "This task management system lets you customize your name, add, delete, and edit tasks, and celebrates you when tasks are completed. It features built-in notifications and stores data in the browser, allowing you to resume tasks conveniently. Designed and developed by yours truly.",
-    //   stack: ["react", "javascript", "figma", "sass"],
-    //   img: "/todo.svg",
-    // },
     {
-      title: "Multi-step form",
-      gitLink: "https://github.com/adex-hub/multi-step-form-main",
-      liveLink: "https://ade-loremgaming.netlify.app/",
+      title: "Auth API",
+      gitLink: "https://github.com/AlexisGuanique/api_login",
+      liveLink: "",
       about:
-        "This site features a clean, user-friendly multi-step form for subscribing to a gaming service. Users input personal info, select a plan (monthly or yearly), choose add-ons (online service, larger storage, customizable profile), and review the summary before confirming.",
-      stack: ["html", "sass", "javascript", "ms clarity"],
-      img: "/multistep.svg",
+        "Desarrollé una API de autenticación con Python y Flask, utilizando SQLite como base de datos y Docker para su despliegue. La API recibe credenciales de usuario, valida si el token actual sigue siendo válido y retorna un par de tokens: un access token para autenticar cada petición y un refresh token para generar uno nuevo cuando el primero expira. Si ambos tokens han caducado, el sistema requiere un nuevo inicio de sesión. Esta API se implementa como servicio central de autenticación en todas mis aplicaciones y está alojada en una máquina virtual de Google Cloud.",
+      stack: ["python", "flask", "sqlite", "docker", "google cloud"],
+      img: "/authapi.png",
+      owner: "Personal",
     },
   ];
 
@@ -83,6 +117,13 @@ export default function Works() {
       ref={ref}
       id="work"
     >
+      <Timeline />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
       <Title>Projects</Title>
       {works.map((work, index) => (
         <FolioCard
@@ -96,8 +137,6 @@ export default function Works() {
           owner={work.owner}
         />
       ))}
-
-      <Timeline />
     </section>
   );
 }

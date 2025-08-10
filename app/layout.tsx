@@ -6,11 +6,12 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import Header from "./components/header-section/Header";
 import { ViewProvider } from "@/contexts/ViewContext";
+import MeteorShower from "./components/ui/MeteorShower";
 
 const kumbhSans = Kumbh_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Adeola Badero — Frontend Software Engineer",
+  title: "Alexis Guanique — Software Engineer",
   description:
     "Frontend Engineer specializing in React, Next.js, and TypeScript. Creating modern, responsive web experiences with a focus on performance and accessibility. Let's build something amazing together.",
   keywords: [
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
     "portfolio",
   ],
   openGraph: {
-    title: "Adeola Badero — Frontend Software Engineer",
+    title: "Alexis Guanique — Software Engineer",
     description:
       "Frontend Engineer formerly at Bluechip Technologies, passionate about crafting next-gen software and creative websites. I drive growth by crafting user experiences that blend aesthetics with functionality through my design and development skills. I thrive on turning ideas into seamless digital solutions.",
     url: "https://www.adeolabadero.me",
@@ -82,6 +83,7 @@ export default function RootLayout({
         className={`${kumbhSans.className} max-w-[90%] xl:max-w-[1223px] w-full mx-auto overflow-x-hidden`}
       >
         <>
+          <MeteorShower />
           <ViewProvider>
             <Header />
             {children}
