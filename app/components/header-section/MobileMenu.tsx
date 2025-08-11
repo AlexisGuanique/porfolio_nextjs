@@ -31,7 +31,7 @@ export default function MobileMenu({
               : "text-white/80 hover:text-white"
           } w-fit transition-colors duration-200`}
         >
-          Home
+          Inicio
         </Link>
         <Link
           href="#about"
@@ -41,7 +41,7 @@ export default function MobileMenu({
               : "text-white/80 hover:text-white"
           } w-fit transition-colors duration-200`}
         >
-          About
+          Sobre mí
         </Link>
         <Link
           href="#work"
@@ -51,7 +51,7 @@ export default function MobileMenu({
               : "text-white/80 hover:text-white"
           } w-fit transition-colors duration-200`}
         >
-          Work
+          Experiencia
         </Link>
         <Link
           href="#contact"
@@ -61,7 +61,7 @@ export default function MobileMenu({
               : "text-white/80 hover:text-white"
           } w-fit transition-colors duration-200`}
         >
-          Contact
+          Contacto
         </Link>
       </ul>
 
