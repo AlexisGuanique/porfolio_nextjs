@@ -29,7 +29,7 @@ export default function Header() {
                 sectionInView === "home" && "text-white"
               } text-xl font-medium`}
             >
-              Home
+              Inicio
             </Link>
             <Link
               href="#about"
@@ -37,7 +37,7 @@ export default function Header() {
                 sectionInView === "about" && "text-white"
               } text-xl font-medium`}
             >
-              About
+              Sobre mi
             </Link>
             <Link
               href="#work"
@@ -45,7 +45,7 @@ export default function Header() {
                 sectionInView === "work" && "text-white"
               } text-xl font-medium`}
             >
-              Work
+              Experiencia
             </Link>
             <Link
               href="#education"
@@ -53,7 +53,7 @@ export default function Header() {
                 sectionInView === "education" && "text-white"
               } text-xl font-medium`}
             >
-              Education
+              Educación
             </Link>
 
             <Link
@@ -62,7 +62,7 @@ export default function Header() {
                 sectionInView === "contact" && "text-white"
               } text-xl font-medium`}
             >
-              Contact
+              Contacto
             </Link>
           </ul>
           <div className="gap-5 text-xl hidden sm:flex">

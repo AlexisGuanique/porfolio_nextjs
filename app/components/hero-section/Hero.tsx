@@ -88,7 +88,7 @@ export default function Hero() {
           transition={{ duration: 0.1, ease: "easeOut" }}
         >
           <p className="text-white/60 text-xl smm:text-2xl mb-3 smm:mb-0 lg:text-3xl col-span-6">
-            Hey, there
+            Hola!
           </p>
           <motion.div
             animate={handWaveAnimation}
@@ -103,7 +103,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={animateIn1}
         >
-          <p className="text-white/60 inline">I&apos;m </p>
+          <p className="text-white/60 inline">Soy </p>
           <span className="bg-linear-to-br bg-clip-text text-transparent from-[#7CC0C4] via-[#6fabdd] to-[#3c94c7]">
             Alexis Guanique
           </span>
@@ -115,7 +115,7 @@ export default function Hero() {
           animate={animateIn2}
           className="text-white/80  text-xl smm:text-2xl lg:text-3xl xl:text-4xl mt-3 smm:mt-6 "
         >
-          Passionate about problem-solving and learning new technologies.
+          Apasionado por la resolución de problemas y el aprendizaje de nuevas tecnologías.
         </motion.p>
       </div>
 

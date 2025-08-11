@@ -197,7 +197,7 @@ export default function Contact() {
                     setFormDisplay(false);
                     reset();
                   }}
-                  className="text-2xl opacity-50"
+                  className="text-2xl opacity-50 text-white"
                 />
               </div>
               <div className="flex items-center h-full gap-2 w-full">
@@ -223,7 +223,7 @@ export default function Contact() {
                           message: "Please enter a valid name.",
                         },
                       })}
-                      className="bg-transparent rounded-md border border-[#737373c4] focus:border-[#9f9d9dc4] outline-hidden py-1 pl-2"
+                      className="bg-transparent rounded-md border border-[white] focus:border-[#9f9d9dc4] outline-hidden py-1 pl-2"
                     />
                     {errors?.userName && (
                       <span className="text-red-400 text-xs">
@@ -248,7 +248,7 @@ export default function Contact() {
                           message: "Please provide a valid email address",
                         },
                       })}
-                      className="bg-transparent rounded-md border border-[#737373c4] focus:border-[#9f9d9dc4] outline-hidden py-1 pl-2"
+                      className="bg-transparent rounded-md border border-[white] focus:border-[#9f9d9dc4] outline-hidden py-1 pl-2"
                     />
                     {errors?.userEmail && (
                       <span className="text-red-400 text-xs">
@@ -270,7 +270,7 @@ export default function Contact() {
                       })}
                       rows={4}
                       cols={50}
-                      className="bg-transparent rounded-md border border-[#737373c4] focus:border-[#9f9d9dc4] outline-hidden py-1 pl-2"
+                      className="bg-transparent rounded-md border border-[white] focus:border-[#9f9d9dc4] outline-hidden py-1 pl-2"
                     />
                     {errors?.userMessage && (
                       <span className="text-red-400 text-xs">

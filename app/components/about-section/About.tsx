@@ -73,7 +73,7 @@ export default function About() {
               charSpace={"mr-[0.001em]"}
               className="font-bold antialiased text-xl md:text-2xl mb-2"
             >
-              Backend Tools
+              Herramientas de Backend
             </AnimatedTitle>
             <AnimatedBody className="text-white/60 text-base md:text-xl leading-8">
               Python, Django, Flask, Node.js, Express, PostgreSQL, MongoDB,
@@ -87,7 +87,7 @@ export default function About() {
               charSpace={"mr-[0.001em]"}
               className="font-bold antialiased text-xl md:text-2xl mb-2"
             >
-              Frontend Tools
+              Herramientas de Frontend
             </AnimatedTitle>
             <AnimatedBody className="text-white/60 text-base md:text-xl leading-8">
               JavaScript(ES6+), React, Redux, Zustand, Next.js, ViteJs, TypeScript, HTML5,
@@ -100,7 +100,7 @@ export default function About() {
               charSpace={"mr-[0.001em]"}
               className="font-bold antialiased text-xl md:text-2xl mb-2"
             >
-              UI Libraries
+              Herramientas de UI
             </AnimatedTitle>
             <AnimatedBody className="text-white/60 text-base md:text-xl leading-8">
               CSS3/SCSS/SASS, Tailwind CSS, Styled Components, Chakra UI, Framer
