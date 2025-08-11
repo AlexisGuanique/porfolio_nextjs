@@ -77,7 +77,8 @@ export default function Hero() {
   return (
     <section
       ref={ref}
-      className="pt-36 sm:pt-0 flex flex-col sm:flex-row h-dvh items-center gap-6 sm:justify-between"
+      className="pt-36 sm:pt-0 flex flex-col sm:flex-row h-dvh items-center gap-6 sm:justify-between relative"
+      style={{ zIndex: 'var(--z-content)' }}
       id="home"
     >
       <div className="text sm:w-[60%]">

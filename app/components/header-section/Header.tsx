@@ -13,7 +13,7 @@ export default function Header() {
 
   return (
     <>
-      <div className="fixed max-w-[90%] xl:max-w-[1223px] w-full z-10 select-none">
+      <div className="fixed max-w-[90%] xl:max-w-[1223px] w-full select-none" style={{ zIndex: 'var(--z-header)' }}>
         <div className="flex justify-between items-center px-6 py-4 rounded-2xl bg-linear-to-r from-[#d9d9d91f] to-[#7373731f] mt-4 sm:mt-8 std-backdrop-blur">
           <FaA className="select-none text-3xl text-white" />
           <Icon

@@ -31,6 +31,16 @@
   --color-base-300: oklch(92% 0 0);
 }
 
+/* Sistema de Z-Index */
+:root {
+  --z-background: -10;
+  --z-stars: 0;
+  --z-content: 10;
+  --z-header: 20;
+  --z-modal: 30;
+  --z-tooltip: 40;
+}
+
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
@@ -53,21 +63,29 @@
   scroll-behavior: smooth;
 }
 
-/* Efecto de parallax para la imagen de fondo */
-.parallax-bg {
+/* Efecto de parallax para la imagen de fondo - ELIMINADO */
+/* .parallax-bg {
   background-image: url('/space.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   transition: background-size 0.1s ease-out;
-}
+} */
 
 body {
-  background: #196BBD;
-  background-image: url('/space.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.05) 0%, transparent 50%),
+    linear-gradient(135deg, 
+      #0a0a0a 0%, 
+      #0f0f23 15%, 
+      #1a1a2e 30%, 
+      #16213e 45%, 
+      #0f3460 60%, 
+      #0a0a2a 75%, 
+      #0a0a0a 100%
+    );
   color: white;
   overscroll-behavior: none;
 
@@ -272,4 +290,81 @@ body {
 .meteor:nth-child(23) { animation-duration: 3.3s; animation-delay: 11s; }
 .meteor:nth-child(24) { animation-duration: 4.0s; animation-delay: 11.5s; }
 .meteor:nth-child(25) { animation-duration: 3.5s; animation-delay: 12s; }
+
+/* Estilos para el cielo estrellado - OPTIMIZADOS */
+@keyframes star-twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes star-glow {
+  0%, 100% {
+    box-shadow: 0 0 1px currentColor;
+  }
+  50% {
+    box-shadow: 0 0 3px currentColor;
+  }
+}
+
+@keyframes star-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-1px);
+  }
+}
+
+.star {
+  animation: star-twinkle 4s ease-in-out infinite; /* Reducido de 3s a 4s */
+}
+
+.star-special {
+  animation: star-twinkle 3s ease-in-out infinite, star-float 6s ease-in-out infinite; /* Reducido de 2s a 3s */
+}
+
+.star-bright {
+  animation: star-twinkle 2.5s ease-in-out infinite; /* Reducido de 1.5s a 2.5s */
+}
+
+/* Estilos para estrellas fugaces - OPTIMIZADAS */
+@keyframes shooting-star {
+  0% {
+    opacity: 1;
+    transform: translateX(0) translateY(0) rotate(45deg);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    opacity: 0.6;
+    transform: translateX(50px) translateY(50px) rotate(45deg);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100px) translateY(100px) rotate(45deg);
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0);
+  }
+}
+
+/* Estilos para constelaciones - OPTIMIZADAS */
+.constellation-line {
+  animation: constellation-fade 12s ease-in-out infinite; /* Aumentado de 8s a 12s */
+}
+
+@keyframes constellation-fade {
+  0%, 100% {
+    opacity: 0.05;
+    stroke-width: 0.3;
+  }
+  50% {
+    opacity: 0.15;
+    stroke-width: 0.4;
+  }
+}
 
