@@ -15,9 +15,7 @@ export default function Header() {
     <>
       <div className="fixed max-w-[90%] xl:max-w-[1223px] w-full z-10 select-none">
         <div className="flex justify-between items-center px-6 py-4 rounded-2xl bg-linear-to-r from-[#d9d9d91f] to-[#7373731f] mt-4 sm:mt-8 std-backdrop-blur">
-          <FaA
-            className="select-none text-3xl text-white"
-          />
+          <FaA className="select-none text-3xl text-white" />
           <Icon
             onClick={() => setMenuOpen(!menuOpen)}
             className="cursor-pointer flex sm:hidden text-2xl"
@@ -27,25 +25,42 @@ export default function Header() {
           <ul className="hidden sm:flex gap-8 lg:gap-12 text-white/40">
             <Link
               href="#home"
-              className={`${sectionInView === "home" && "text-white"} `}
+              className={`${
+                sectionInView === "home" && "text-white"
+              } text-xl font-medium`}
             >
               Home
             </Link>
             <Link
-              href="#work"
-              className={`${sectionInView === "work" && "text-white"} `}
-            >
-              Work
-            </Link>
-            <Link
               href="#about"
-              className={`${sectionInView === "about" && "text-white"} `}
+              className={`${
+                sectionInView === "about" && "text-white"
+              } text-xl font-medium`}
             >
               About
             </Link>
             <Link
+              href="#work"
+              className={`${
+                sectionInView === "work" && "text-white"
+              } text-xl font-medium`}
+            >
+              Work
+            </Link>
+            <Link
+              href="#education"
+              className={`${
+                sectionInView === "education" && "text-white"
+              } text-xl font-medium`}
+            >
+              Education
+            </Link>
+
+            <Link
               href="#contact"
-              className={`${sectionInView === "contact" && "text-white"} `}
+              className={`${
+                sectionInView === "contact" && "text-white"
+              } text-xl font-medium`}
             >
               Contact
             </Link>

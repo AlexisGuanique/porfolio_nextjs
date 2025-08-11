@@ -124,7 +124,7 @@ export default function Works() {
       <br />
       <br />
 
-      <Title>Projects</Title>
+      <Title>Algunos Proyectos</Title>
       {works.map((work, index) => (
         <FolioCard
           key={index}

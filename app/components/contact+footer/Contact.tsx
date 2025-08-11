@@ -44,8 +44,12 @@ export default function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
 
   function onSubmit(data: any) {
-    console.log(data);
+    // console.log(data);
+    // console.log("Service ID:", process.env.NEXT_PUBLIC_SERVICE_ID);
+    // console.log("Template ID:", process.env.NEXT_PUBLIC_TEMPLATE_ID);
+    // console.log("Public Key:", process.env.NEXT_PUBLIC_PUBLIC_KEY);
 
+    // Enviar auto-respuesta al usuario
     emailjs
       .sendForm(
         `${process.env.NEXT_PUBLIC_SERVICE_ID}`,
@@ -57,8 +61,27 @@ export default function Contact() {
       )
       .then(
         () => {
-          console.log("SUCCESS!");
-          toast.success("Message sent", {
+          // console.log("Auto-respuesta enviada!");
+          
+          // Enviar notificación a ti
+          return emailjs.send(
+            `${process.env.NEXT_PUBLIC_SERVICE_ID}`,
+            `${process.env.NEXT_PUBLIC_NOTIFICATION_TEMPLATE_ID}`,
+            {
+              userName: data.userName,
+              userEmail: data.userEmail,
+              userMessage: data.userMessage,
+            },
+            {
+              publicKey: `${process.env.NEXT_PUBLIC_PUBLIC_KEY}`,
+            }
+          );
+        }
+      )
+      .then(
+        () => {
+          // console.log("SUCCESS! Ambos emails enviados");
+          toast.success("Mensaje enviado correctamente", {
             position: "bottom-left",
             autoClose: 3000,
             hideProgressBar: false,
@@ -72,8 +95,8 @@ export default function Contact() {
           setTimeout(() => setFormDisplay(!formDisplay), 5000);
         },
         (error) => {
-          console.log("FAILED...", error.text);
-          toast.error("Message not sent, check your network", {
+          // console.log("FAILED...", error.text);
+          toast.error("Error al enviar el mensaje", {
             position: "bottom-left",
             autoClose: 3000,
             hideProgressBar: false,
@@ -115,7 +138,7 @@ export default function Contact() {
                 charSpace={"mr-[0.001em]"}
                 className="text-xl sm:text-2xl md:text-[32px] lg:text-[40px] font-bold pt-4 md:pt-10 lg:pt-12 "
               >
-                GOT A PROJECT IN MIND?
+                TIENES ALGUN PROYECTO EN MENTE?
               </AnimatedTitle>
               <Link href="#footer" data-no-blobity>
                 <span
@@ -125,7 +148,7 @@ export default function Contact() {
                   }}
                   className="text-xl sm:text-2xl md:text-[32px] w-fit underline lg:text-[40px] font-bold leading-tight hidden sm:block lg:hidden"
                 >
-                  CONTACT ME
+                  CONTACTARME
                 </span>
               </Link>
             </div>
@@ -143,7 +166,7 @@ export default function Contact() {
                   setFormDisplay(!formDisplay);
                 }}
               >
-                CONTACT&nbsp;ME
+                CONTACTARME
               </button>
             </Link>
           </div>
@@ -165,7 +188,7 @@ export default function Contact() {
             >
               <div className="flex items-center justify-between py-4 md:py-5 lg:py-6">
                 <span className="font-bold uppercase text-2xl">
-                  CONTACT ME
+                  CONTACTARME
                 </span>
                 <Icon
                   icon="gg:close"
@@ -188,7 +211,7 @@ export default function Contact() {
                       htmlFor="userName"
                       className="opacity-70 text-sm lg:text-base "
                     >
-                      Name
+                      Nombre
                     </label>
                     <input
                       type="text"
@@ -238,7 +261,7 @@ export default function Contact() {
                       htmlFor="userMessage"
                       className="opacity-70 text-sm lg:text-base"
                     >
-                      Message
+                      Mensaje
                     </label>
                     <textarea
                       id="userMessage"
@@ -258,7 +281,7 @@ export default function Contact() {
                   <button
                     className={`rounded-md bg-linear-to-r from-[#d9d9d91f] to-[#7373731f] py-3 px-5 ${syne.className} font-bold uppercase mt-4`}
                   >
-                    Send
+                    Enviar
                   </button>
                 </form>
               </div>

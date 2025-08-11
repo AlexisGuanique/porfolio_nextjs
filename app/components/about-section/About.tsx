@@ -53,7 +53,7 @@ export default function About() {
             entender el problema de fondo y entregar una solución que no solo
             funcione bien, sino que también sea algo de lo que el cliente y yo
             podamos sentirnos orgullosos. Si quieres conocer más sobre mi
-            trabajo, aquí puedes acceder a mi currículum. Here&apos;s{" "}
+            trabajo, aquí puedes acceder a mi currículum.
             <br className="hidden md:block" />
             <Link
               className="underline"
@@ -61,7 +61,7 @@ export default function About() {
                 "https://docs.google.com/document/d/e/2PACX-1vScp0s5CtJjRZmem6V-0diwXDPwO8AiZKWl5qooH4ZfFS-c2bmUjmePc7YNCTqc2SJlF23qyxaLGfFy/pub"
               }
             >
-              mi currículum
+              Descargar CV
             </Link>
             .
           </AnimatedBody>
