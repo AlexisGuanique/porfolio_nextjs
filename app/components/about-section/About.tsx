@@ -33,27 +33,24 @@ export default function About() {
         <div className="grid grid-cols-1 antialiased gap-6 text-white/90 text-xl md:text-2xl">
           <AnimatedBody className="leading-[34px] md:leading-[39px]">
             Soy Alexis Guanique, desarrollador full stack apasionado por
-            resolver problemas y convertir ideas en soluciones reales. Me
-            especializo en desarrollo web, automatización e inteligencia
-            artificial para generar impacto en los negocios. He desarrollado
-            desde extensiones de Chrome y chatbots con IA hasta sistemas
-            escalables en microservicios y bots automatizados. Mi código siempre
-            busca ser limpio, mantenible y escalable.
+            resolver problemas y crear soluciones reales. Me especializo en
+            desarrollo web, automatización e IA para generar impacto en
+            negocios. Desarrollé desde extensiones de Chrome y chatbots
+            hasta sistemas escalables en microservicios, siempre buscando
+            código limpio y mantenible.
           </AnimatedBody>
           <AnimatedBody className="leading-[34px] md:leading-[39px]">
-            Manejo tecnologías como Python, Django, Flask, Node.js, React,
-            Next.js y TypeScript, y trabajo con bases de datos como PostgreSQL,
-            MongoDB y SQLite. También tengo experiencia desplegando y
-            administrando entornos en AWS, Google Cloud y Heroku, integrando
-            APIs y documentando procesos de forma clara.
+            Manejo Python, Django, Flask, Node.js, React, Next.js y
+            TypeScript, con bases de datos PostgreSQL, MongoDB y SQLite.
+            Experiencia en AWS, Google Cloud y Heroku, integrando APIs
+            y documentando procesos.
           </AnimatedBody>
           <AnimatedBody className="inline leading-[34px] md:leading-[39px]">
-            Desde 2019, cada proyecto ha sido una oportunidad para aprender,
-            experimentar y subir el nivel. Me motiva enfrentar retos nuevos,
-            entender el problema de fondo y entregar una solución que no solo
-            funcione bien, sino que también sea algo de lo que el cliente y yo
-            podamos sentirnos orgullosos. Si quieres conocer más sobre mi
-            trabajo, aquí puedes acceder a mi currículum.
+            Desde 2019, cada proyecto es una oportunidad para aprender y
+            crecer. Me motiva enfrentar nuevos retos, entender el problema
+            de fondo y entregar soluciones de las que tanto el cliente como
+            yo podamos sentirnos orgullosos. Conoce más sobre mi trabajo
+            en mi currículum. 
             <br className="hidden md:block" />
             <Link
               className="underline"

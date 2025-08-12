@@ -11,6 +11,15 @@ export default function Educations() {
 
   const educations = [
     {
+      title: "Licenciatura de Sistemas Informaticos",
+      liveLink:
+        "",
+      gitLink: "",
+      about:
+        "Me encuentro estudiando la licenciatura de Sistemas Informaticos en la Universidad Nacional de General Sarmiento. Actualmente estoy en el 3er año de la carrera.",
+      img: "/ungs.png",
+    },
+    {
       title: "Principios SOLID y clean code",
       liveLink:
         "https://www.udemy.com/certificate/UC-e11fcc14-1e52-428d-b9b6-c69fb72fb511/",
@@ -85,7 +94,7 @@ export default function Educations() {
       ref={ref}
       id="education"
     >
-      <Title>Educations</Title>
+      <Title>Educación</Title>
       {educations.map((education, index) => (
         <EducationCard
           key={index}

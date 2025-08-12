@@ -138,7 +138,7 @@ export default function Contact() {
                 charSpace={"mr-[0.001em]"}
                 className="text-xl sm:text-2xl md:text-[32px] lg:text-[40px] font-bold pt-4 md:pt-10 lg:pt-12 "
               >
-                TIENES ALGUN PROYECTO EN MENTE?
+                ALGÚN PROYECTO EN MENTE?
               </AnimatedTitle>
               <Link href="#footer" data-no-blobity>
                 <span
@@ -148,7 +148,7 @@ export default function Contact() {
                   }}
                   className="text-xl sm:text-2xl md:text-[32px] w-fit underline lg:text-[40px] font-bold leading-tight hidden sm:block lg:hidden"
                 >
-                  CONTACTARME
+                  CONTÁCTAME
                 </span>
               </Link>
             </div>
@@ -166,7 +166,7 @@ export default function Contact() {
                   setFormDisplay(!formDisplay);
                 }}
               >
-                CONTACTARME
+                CONTÁCTAME
               </button>
             </Link>
           </div>
@@ -188,7 +188,7 @@ export default function Contact() {
             >
               <div className="flex items-center justify-between py-4 md:py-5 lg:py-6">
                 <span className="font-bold uppercase text-2xl">
-                  CONTACTARME
+                  CONTÁCTAME
                 </span>
                 <Icon
                   icon="gg:close"
