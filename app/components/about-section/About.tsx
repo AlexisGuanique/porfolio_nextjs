@@ -76,8 +76,7 @@ export default function About() {
               Herramientas de Frontend
             </AnimatedTitle>
             <AnimatedBody className="text-white/60 text-base md:text-xl leading-8">
-              JavaScript(ES6+), React, Redux, Zustand, Next.js, ViteJs,
-              TypeScript, HTML5, Git/GitHub.
+              JavaScript(ES6+), TypeScript, React, Redux, Zustand, Next.js, ViteJs, HTML5, Git/GitHub.
             </AnimatedBody>
           </div>
           <div>
